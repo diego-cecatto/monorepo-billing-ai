@@ -1,0 +1,10 @@
+{
+  "name": "@biller/utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.14.1"
+  }
+}

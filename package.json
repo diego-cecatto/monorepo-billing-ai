@@ -1,0 +1,33 @@
+{
+  "name": "biller-project",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.15.4",
+  "workspaces": [
+    "web",
+    "api",
+    "packages/*"
+  ],
+  "lint-staged": {
+    "*.(js|jsx|vue)": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "web": "npx pnpm --filter web dev",
+    "dev:api": "npx pnpm --filter api dev",
+    "build": "npx pnpm -r build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "npx pnpm --filter web test"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "eslint": "^9.25.0",
+    "prettier": "^3.5.3",
+    "@types/node": "^22.14.1"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
