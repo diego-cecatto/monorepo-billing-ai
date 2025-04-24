@@ -1,6 +1,7 @@
 {
-  "name": "biller-project",
+  "name": "price-ai",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@8.15.4",
   "workspaces": [
@@ -9,7 +10,7 @@
     "packages/*"
   ],
   "lint-staged": {
-    "*.(js|jsx|vue)": [
+    "**/*.{js,jsx,ts,tsx,json,md,css,scss}": [
       "prettier --write",
       "eslint --fix"
     ]
@@ -18,14 +19,28 @@
     "web": "npx pnpm --filter web dev",
     "dev:api": "npx pnpm --filter api dev",
     "build": "npx pnpm -r build",
+    "test": "npx pnpm --filter web test",
+    "prepare": "husky && husky install",
+    "pre-commit": "lint-staged",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "npx pnpm --filter web test"
+    "lint:fix": "eslint --fix src/**",
+    "prettier": "prettier . -c",
+    "prettier:fix": "prettier . --write"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "eslint": "^9.25.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.25.1",
+    "@types/node": "^22.14.1",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
-    "@types/node": "^22.14.1"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0"
   },
   "engines": {
     "node": ">=18.18.0"
