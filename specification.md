@@ -1,8 +1,8 @@
-# Biller Project Specification
+# Payments Project Specification
 
 ## Overview
 
-The Biller Project is a project that generates invoices and orders for customers. It will be developed using the following technologies:
+The Payments Project is a project that validate the price of yours products accodlyt the composition and expenses, using AI:
 
 - **Backend**: TypeScript + Node.js
 - **Frontend**: TypeScript + React + React Query
@@ -42,6 +42,9 @@ The project should have the following dependencies:
 - **tRPC**:
   - `@trpc/client`
   - `@trpc/server`
+- **husky**:
+  - `lint`
+  - `conventionalcommits`
 
 ## Development Workflow
 
