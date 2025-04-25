@@ -17,7 +17,7 @@
   },
   "scripts": {
     "web": "npx pnpm --filter web dev",
-    "dev:api": "npx pnpm --filter api dev",
+    "api": "npx pnpm --filter api dev",
     "build": "npx pnpm -r build",
     "test": "npx pnpm --filter web test",
     "prepare": "husky && husky install",
