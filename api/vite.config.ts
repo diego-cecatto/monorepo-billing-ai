@@ -12,9 +12,9 @@ export default defineConfig({
     // Use the Node plugin for Express + tRPC
     VitePluginNode({
       adapter: "express",
-      appPath: "./src/index.ts", // entrypoint exporting `app`
+      appPath: "./src/index.ts",
       exportName: "app",
-      tsCompiler: "esbuild", // super fast TS compilation
+      tsCompiler: "esbuild",
     }),
   ],
   build: {

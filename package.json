@@ -5,9 +5,10 @@
   "version": "1.0.0",
   "packageManager": "pnpm@8.15.4",
   "workspaces": [
-    "web",
+    "ui",
     "api",
-    "packages/*"
+    "shared/utils",
+    "shared/trpc"
   ],
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,md,css,scss}": [

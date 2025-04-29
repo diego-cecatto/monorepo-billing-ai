@@ -4,6 +4,7 @@ node_modules/
 .pnpm-debug.log
 .env
 .env.*.local
+pnpm-lock.yaml
 
 # Build outputs
 dist/

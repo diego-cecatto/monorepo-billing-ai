@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    // "baseUrl": "./src",
+    "composite": true
+  },
+  "references": [{ "path": "../shared/trpc" }],
+  "include": ["src/**/*", "vite.config.ts"]
+}

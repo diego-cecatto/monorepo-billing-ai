@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+
+    // "declaration": true,
+    // "sourceMap": true
+  },
+  "paths": {
+    "api/*": ["api/src/*"],
+    "@shared/trpc": ["shared/trpc/src"],
+    "@shared/utils": ["shared/utils/src"]
+  }
+}

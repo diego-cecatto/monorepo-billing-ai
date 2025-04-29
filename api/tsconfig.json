@@ -1,23 +1,9 @@
 {
-  "extends": "./../tsconfig.json",
+  "extends": "./../tsconfig.base.json",
   "compilerOptions": {
-    // "target": "ESNext",
-    // "module": "ESNext",
-    // "moduleResolution": "Node",
-    // "esModuleInterop": true,
-    // "strict": true,
-    // "forceConsistentCasingInFileNames": true,
-    // "skipLibCheck": true,
-    // "allowSyntheticDefaultImports": true,
-    // "resolveJsonModule": true,
-    // "isolatedModules": true,
-    // "noEmit": true,
-    // "types": ["node"],
     "baseUrl": "./src",
-    "paths": {
-      "@trpc/*": ["../packages/trpc/src/*"],
-      "@utils/*": ["../packages/utils/src/*"]
-    }
+    "composite": true
   },
-  "include": ["src"]
+  "references": [{ "path": "../shared/trpc" }, { "path": "../shared/utils" }],
+  "include": ["src", "vite.config.ts"]
 }

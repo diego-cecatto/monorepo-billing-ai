@@ -16,9 +16,8 @@ The project should have the following structure:
 - /root
   - /web ← your React app (frontend)
   - /api ← your tRPC server (backend)
-  - /packages
+  - /shared
     - /trpc ← shared types + router logic
-    - /ui ← shared React components
     - /utils ← shared utils or hooks
 
 ## Technical Requirements
