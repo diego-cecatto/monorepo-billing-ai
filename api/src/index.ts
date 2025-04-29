@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(
-  "/trpc",
+  "/api",
   createExpressMiddleware({
     router: appRouter,
     createContext,
