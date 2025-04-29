@@ -17,10 +17,10 @@
     ]
   },
   "scripts": {
-    "web": "npx pnpm --filter web dev",
+    "ui": "npx pnpm --filter ui dev",
     "api": "npx pnpm --filter api dev",
     "build": "npx pnpm -r build",
-    "test": "npx pnpm --filter web test",
+    "test": "npx pnpm --filter ui test",
     "prepare": "husky && husky install",
     "pre-commit": "lint-staged",
     "lint": "eslint . --ext .ts,.tsx",

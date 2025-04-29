@@ -7,14 +7,12 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
 
-    // "declaration": true,
-    // "sourceMap": true
-  },
-  "paths": {
-    "api/*": ["api/src/*"],
-    "@shared/trpc": ["shared/trpc/src"],
-    "@shared/utils": ["shared/utils/src"]
+    "paths": {
+      "api/*": ["api/src/*"],
+      "@shared/trpc": ["shared/trpc/src"],
+      "@shared/utils": ["shared/utils/src"]
+    }
   }
 }

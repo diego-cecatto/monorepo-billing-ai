@@ -2,7 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    // "baseUrl": "./src",
+    "baseUrl": "./src",
     "composite": true
   },
   "references": [{ "path": "../shared/trpc" }],
