@@ -1,7 +1,10 @@
 import { trpc } from "@shared/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { httpBatchLink } from "@trpc/client";
+import { Analyze } from "pages/Analyze";
+import { Home } from "pages/Home";
 import { useState } from "react";
-// import { httpBatchLink } from "@trpc/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -9,19 +12,22 @@ export const App = () => {
   const [trpcClient] = useState(() =>
     trpc.createClient({
       links: [
-        // httpBatchLink({
-        //   url: "/trpc",
-        // }),
+        httpBatchLink({
+          url: "/trpc",
+        }),
       ],
-    }),
+    })
   );
 
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <div>
-          <h1>Wellcome</h1>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/analyze" element={<Analyze />} />
+          </Routes>
+        </BrowserRouter>
       </QueryClientProvider>
     </trpc.Provider>
   );
