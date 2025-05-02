@@ -9,7 +9,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    // Use the Node plugin for Express + tRPC
     VitePluginNode({
       adapter: "express",
       appPath: "./src/index.ts",
@@ -22,7 +21,7 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       input: "./src/index.ts",
-      external: ["express", "@trpc/server", "openai"], // don’t bundle deps
+      external: ["express", "@trpc/server", "openai"],
     },
   },
 });

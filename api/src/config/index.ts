@@ -16,4 +16,9 @@ export default {
     openaiApiFrequencyPenalty: process.env.OPENAI_API_FREQUENCY_PENALTY || 0,
     openaiApiPresencePenalty: process.env.OPENAI_API_PRESENCE_PENALTY || 0,
   },
+  a3: {
+    clientId: process.env.A3_CLOUD_CLIENT_ID || "",
+    clientSecret: process.env.A3_CLOUD_CLIENT_SECRET || "",
+    service: process.env.A3_CLOUD_SERVICE_NAME || "",
+  },
 };

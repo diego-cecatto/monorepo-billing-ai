@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
