@@ -2,7 +2,7 @@ import { trpc } from "@shared/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/client";
 // import { Analyze } from "pages/Analyze";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import { Import } from "./pages/Import";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -25,7 +25,7 @@ export const App = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Import />} />
             <Route path="/import" element={<Import />} />
             {/* <Route path="/analyze" element={<Analyze />} /> */}
           </Routes>

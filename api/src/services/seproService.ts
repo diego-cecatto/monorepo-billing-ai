@@ -23,11 +23,11 @@ export class SeproIDClient {
   private clientId: string;
   private clientSecret: string;
   private tokenUrl: string =
-    "https://serproid.serpro.gov.br/oauth/v0/oauth/client_token";
+    "https://serproid.serpro.gov.br/oauth/v1/oauth/client-token";
   private signatureUrl: string =
-    "https://serproid.serpro.gov.br/oauth/v0/oauth/signature";
+    "https://serproid.serpro.gov.br/oauth/v1/oauth/signature";
   private certDiscoveryUrl?: string =
-    "https://serproid.serpro.gov.br/oauth/v0/oauth/certificate-discovery";
+    "https://serproid.serpro.gov.br/oauth/v1/oauth/certificate-discovery";
 
   private _token: string | null = null;
   private _expiresAt = 0;

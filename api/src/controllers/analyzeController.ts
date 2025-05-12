@@ -11,7 +11,7 @@ export async function analyzeController(
     if (!product) {
       return res.status(400).json({ error: "Product is required" });
     }
-    const result = await analyzeComposition(product);
+    const result = await analyzeComposition();
     res.json(result);
   } catch (err) {
     next(err);

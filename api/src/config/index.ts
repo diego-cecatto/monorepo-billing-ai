@@ -21,4 +21,8 @@ export default {
     clientSecret: process.env.A3_CLOUD_CLIENT_SECRET || "",
     service: process.env.A3_CLOUD_SERVICE_NAME || "",
   },
+  a1: {
+    pfxPassword: process.env.A1_PFX_PASSWORD || "",
+  },
+  CNPJ: process.env.CNPJ || "",
 };

@@ -37,3 +37,7 @@ coverage/
 # Cypress
 cypress/videos/
 cypress/screenshots/
+
+
+# Certificado
+*.pfx
